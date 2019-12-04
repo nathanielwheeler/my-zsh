@@ -1,5 +1,6 @@
 # Prompt
-PROMPT="%F{red}[%f%F{yellow}%D %*%f%F{red}]%f%F{magenta}%n%f%F{red}:%f%F{cyan}%~%f%F{red} ⁉️ %f "
+PROMPT="	%F{cyan}%~
+%F{red}[%F{yellow}%D %*%F{red}]%F{magenta}%n%F{red}:%F{red} ⁉️  %f"
 
 # My Aliases
 alias gosrc='cd ${HOME}/src/go/src/github.com/nathanielwheeler'
