@@ -7,9 +7,11 @@ alias gosrc='cd ${HOME}/src/go/src/github.com/nathanielwheeler'
 # Go Programming
 export GOPATH="${HOME}/src/go"
 export GOROOT="$(brew --prefix golang)/libexec"
+export GOBIN="${GOPATH}/bin"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}/bin" || mkdir -p "${GOPATH}/bin"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 test -d "${GOPATH}/src/github.com/nathanielwheeler" || mkdir -p "${GOPATH}/src/github.com/nathanielwheeler"
 
