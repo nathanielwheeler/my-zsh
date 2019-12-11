@@ -1,9 +1,13 @@
 # Prompt
-PROMPT="	%F{cyan}%~
-%F{red}[%F{yellow}%D %*%F{red}]%F{magenta}%n%F{red}:%F{red} ⁉️  %f"
+PROMPT="        %F{red}[%F{yellow}%D %*%F{red}] %F{cyan}%~
+ ⁉️  %f"
 
-# My Aliases
-alias gosrc='cd ${HOME}/src/go/src/github.com/nathanielwheeler'
+# Git Commands
+function gc() {
+        git add .
+        git commit -m "$*"
+        git push
+}
 
 # Go Programming
 export GOPATH="${HOME}/src/go"
@@ -15,6 +19,9 @@ test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/bin" || mkdir -p "${GOPATH}/bin"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 test -d "${GOPATH}/src/github.com/nathanielwheeler" || mkdir -p "${GOPATH}/src/github.com/nathanielwheeler"
+
+alias goland='/usr/local/bin/goland'
+alias gosrc='cd ${HOME}/src/go/src/github.com/nathanielwheeler'
 
 # History in cache directory:
 HISTSIZE=10000
